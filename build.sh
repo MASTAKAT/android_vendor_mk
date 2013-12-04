@@ -19,11 +19,11 @@ DEVICE="$1"
 EXTRAS="$2"
 
 # Get build version
-MAJOR=$(cat $DIR/vendor/mk/vendor.mk | grep 'ROM_VERSION_MAJOR := *' | sed  's/ROM_VERSION_MAJOR := //g')
-MINOR=$(cat $DIR/vendor/mk/vendor.mk | grep 'ROM_VERSION_MINOR := *' | sed  's/ROM_VERSION_MINOR := //g')
-MAINTENANCE=$(cat $DIR/vendor/mk/vendor.mk | grep 'ROM_VERSION_MAINTENANCE := *' | sed  's/ROM_VERSION_MAINTENANCE := //g')
+#MAJOR=$(cat $DIR/vendor/mk/vendor.mk | grep 'ROM_VERSION_MAJOR := *' | sed  's/ROM_VERSION_MAJOR := //g')
+#MINOR=$(cat $DIR/vendor/mk/vendor.mk | grep 'ROM_VERSION_MINOR := *' | sed  's/ROM_VERSION_MINOR := //g')
+#MAINTENANCE=$(cat $DIR/vendor/mk/vendor.mk | grep 'ROM_VERSION_MAINTENANCE := *' | sed  's/ROM_VERSION_MAINTENANCE := //g')
 
-VERSION=$MAJOR.$MINOR$MAINTENANCE
+#VERSION=$MAJOR.$MINOR$MAINTENANCE
 
 # If there is no extra parameter, reduce parameters index by 1
 if [ "$EXTRAS" == "true" ] || [ "$EXTRAS" == "false" ]; then
@@ -37,7 +37,7 @@ fi
 # Get start time
 res1=$(date +%s.%N)
 
-echo -e "Building MASTAKAT $VERSION for $DEVICE";
+echo -e "Building MASTAKAT for $DEVICE";
 echo -e "Start time: $(date)"
 
 # Decide what command to execute
