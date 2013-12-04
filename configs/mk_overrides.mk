@@ -15,6 +15,10 @@
 # PRODUCT_PACKAGES += \
 #         Busybox
 
+# Load ART by default
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.dalvik.vm.lib=libart.so 
+
 # Include bootanimation
 ifneq ($(BOOTANIMATION_NAME),)
     PRODUCT_COPY_FILES += \
