@@ -12,8 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# PRODUCT_PACKAGES += \
-#         Busybox
+ PRODUCT_PACKAGES += \
+					Busybox
 
 # Load ART by default
 PRODUCT_PROPERTY_OVERRIDES += \
