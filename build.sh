@@ -7,9 +7,9 @@ echo -e '\0033\0143'
 clear
 
 # Get current path
-DIR="$(cd `dirname $0`; pwd)"
-OUT="$(readlink $DIR/out)"
-[ -z "${OUT}" ] && OUT="${DIR}/out"
+#DIR="$(cd `dirname $0`; pwd)"
+#OUT="$(readlink $DIR/out)"
+#[ -z "${OUT}" ] && OUT="${DIR}/out"
 
 # Local defaults, can be overriden by environment
 : ${THREADS:="$(cat /proc/cpuinfo | grep "^processor" | wc -l)"}
