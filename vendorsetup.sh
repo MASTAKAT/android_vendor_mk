@@ -1,4 +1,4 @@
-add_lunch_combo aosp_hammerhead-userdebug
-add_lunch_combo aosp_hammerhead-user
-add_lunch_combo aosp_mako-userdebug
-add_lunch_combo aosp_mako-user
+add_lunch_combo mk_hammerhead-userdebug
+add_lunch_combo mk_hammerhead-user
+add_lunch_combo mk_mako-userdebug
+add_lunch_combo mk_mako-user
