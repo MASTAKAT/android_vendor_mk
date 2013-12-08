@@ -34,11 +34,7 @@ else
         UPLOAD="$4"
 fi
 
-# Get start time
-res1=$(date +%s.%N)
-
 echo -e "Building MASTAKAT for $DEVICE";
-echo -e "Start time: $(date)"
 
 # Decide what command to execute
 case "$EXTRAS" in
@@ -71,13 +67,9 @@ echo -e "Setting up environment"
 echo -e ""
 
 # lunch/brunch device
-echo -e "Lunching device [$DEVICE] (Includes dependencies sync)"
+echo -e "Lunching device [$DEVICE]"
 lunch "mk_$DEVICE-userdebug";
 echo -e "Starting compilation"
 mka bacon
 
 echo -e ""
-
-# Get elapsed time
-res2=$(date +%s.%N)
-echo -e "Total time elapsed: (echo "($res2 - $res1) / 60"|bc ) minutes ((echo "$res2 - $res1"|bc ) seconds)"
