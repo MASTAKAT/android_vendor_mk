@@ -13,7 +13,8 @@
 # limitations under the License.
 
  PRODUCT_PACKAGES += \
-					Busybox
+     Busybox \
+     Lightbulb
 
 # Load ART by default
 PRODUCT_PROPERTY_OVERRIDES += \
