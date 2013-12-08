@@ -18,6 +18,3 @@ include vendor/mk/vendor.mk
 include vendor/mk/configs/aosp_fixes.mk
 include vendor/mk/configs/system.mk
 include vendor/mk/configs/mk_overrides.mk
-include vendor/mk/configs/version.mk
-
-

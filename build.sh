@@ -1,15 +1,10 @@
 #!/bin/bash
 
-# Version 2.0.4
+# Android Master Project
 
 # We don't allow scrollback buffer
 echo -e '\0033\0143'
 clear
-
-# Get current path
-#DIR="$(cd `dirname $0`; pwd)"
-#OUT="$(readlink $DIR/out)"
-#[ -z "${OUT}" ] && OUT="${DIR}/out"
 
 # Local defaults, can be overriden by environment
 : ${THREADS:="$(cat /proc/cpuinfo | grep "^processor" | wc -l)"}
@@ -17,13 +12,6 @@ clear
 # Import command line parameters
 DEVICE="$1"
 EXTRAS="$2"
-
-# Get build version
-#MAJOR=$(cat $DIR/vendor/mk/vendor.mk | grep 'ROM_VERSION_MAJOR := *' | sed  's/ROM_VERSION_MAJOR := //g')
-#MINOR=$(cat $DIR/vendor/mk/vendor.mk | grep 'ROM_VERSION_MINOR := *' | sed  's/ROM_VERSION_MINOR := //g')
-#MAINTENANCE=$(cat $DIR/vendor/mk/vendor.mk | grep 'ROM_VERSION_MAINTENANCE := *' | sed  's/ROM_VERSION_MAINTENANCE := //g')
-
-#VERSION=$MAJOR.$MINOR$MAINTENANCE
 
 # If there is no extra parameter, reduce parameters index by 1
 if [ "$EXTRAS" == "true" ] || [ "$EXTRAS" == "false" ]; then
@@ -69,7 +57,7 @@ echo -e ""
 # lunch/brunch device
 echo -e "Lunching device [$DEVICE]"
 lunch "mk_$DEVICE-userdebug";
-echo -e "Starting compilation"
+echo -e "Starting compilation..."
 mka bacon
 
 echo -e ""
